@@ -1,0 +1,115 @@
+/*gorila **/
+*body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.boxes {
+	height: 100vh;
+	width: 100%;
+	background-size: =cover;
+	background-position: center;
+	display: table;
+	background-attachment: fixed;
+}
+
+#box1 {
+	background-image: url("BK.png");
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	padding: 100px;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+#box1::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(to top,black,transparent);
+}
+
+#box2 {
+	position: relative;
+	padding: 20% 100px;
+	background-color: black;
+	color: white;
+	font-size: 150%;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+#box3 {
+	position: relative;
+	padding: 20% 100px;
+	background-image: url("BK2.png");
+	object-fit: cover;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+#box3::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(to bottom,black,transparent);
+
+}	
+
+#cld1 {
+	margin-top: -1000px;
+	position: absolute;
+	z-index: 3;
+	transform: translateZ(-3);
+	width: 800px;
+	opacity: 0.6;
+	animation: slideRight 10s infinite;
+}
+
+#siksika {
+	top: 3180px;
+	margin-top: -100px;
+	position: absolute;
+	z-index: 999;
+	transform: translateZ(-3);
+	right: 10px;
+	height: 100px;
+	width: 150px;
+	opacity: 0.75;
+	animation: slideLeft 10s infinite;
+}
+
+
+@keyframes slideRight {
+	0% {
+		transform: translateX(0%);
+	}
+
+	100% {
+		transform: translateX(40%);
+	}
+}
+
+@keyframes slideLeft {
+	0% {
+		transform: translateX(0%);
+	}
+
+	100% {
+		transform: translateX(-350%);
+	}
+}
+
+
+
+
+
